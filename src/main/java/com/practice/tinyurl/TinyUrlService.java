@@ -47,6 +47,7 @@ public class TinyUrlService {
         if (url == null) {
             return null;
         } else if (url.getExpireDate() < System.currentTimeMillis()) {
+            //not a great way to expire mapping, should be a scheduled task pruning entries as they expire
             this.serviceDao.deleteTinyUrl(url.getTinyUrl());
             return null;
         } else {

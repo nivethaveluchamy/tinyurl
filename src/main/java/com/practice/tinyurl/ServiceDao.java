@@ -14,7 +14,7 @@ public class ServiceDao {
     }
 
     public void insertTinyUrl(TinyUrl tinyUrl) {
-        this.hashMap.put(tinyUrl.getTinyUrl(), tinyUrl);
+        this.hashMap.put(tinyUrl.getTinyUrl(), tinyUrl);//mimics db operation
         this.cache.put(tinyUrl.getTinyUrl(), tinyUrl);
     }
 
@@ -24,6 +24,6 @@ public class ServiceDao {
 
     public void deleteTinyUrl(String tinyUrl) {
         this.cache.remove(tinyUrl);
-        this.hashMap.remove(tinyUrl);
+        this.hashMap.remove(tinyUrl);//db operation
     }
 }
