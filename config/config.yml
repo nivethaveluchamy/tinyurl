@@ -1,0 +1,6 @@
+server:
+  type: default
+  maxThreads: 1024
+
+serverId: 200
+cacheCapacity: 10000
